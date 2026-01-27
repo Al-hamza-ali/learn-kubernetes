@@ -623,8 +623,8 @@ For production clusters, you need a highly available control plane:
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                HIGH AVAILABILITY SETUP                           │
-│                                                                  │
+│                HIGH AVAILABILITY SETUP                          │
+│                                                                 │
 │                    ┌──────────────────┐                         │
 │                    │   Load Balancer  │                         │
 │                    │  (HAProxy/Cloud) │                         │
@@ -632,21 +632,21 @@ For production clusters, you need a highly available control plane:
 │           ┌─────────────────┼─────────────────┐                 │
 │           │                 │                 │                 │
 │           ▼                 ▼                 ▼                 │
-│   ┌───────────────┐ ┌───────────────┐ ┌───────────────┐        │
-│   │  Master 1     │ │  Master 2     │ │  Master 3     │        │
-│   │               │ │               │ │               │        │
-│   │ • API Server  │ │ • API Server  │ │ • API Server  │        │
-│   │ • Scheduler   │ │ • Scheduler   │ │ • Scheduler   │        │
-│   │ • Controller  │ │ • Controller  │ │ • Controller  │        │
-│   │   Manager     │ │   Manager     │ │   Manager     │        │
-│   │ • etcd        │ │ • etcd        │ │ • etcd        │        │
-│   └───────────────┘ └───────────────┘ └───────────────┘        │
-│                                                                  │
+│   ┌───────────────┐ ┌───────────────┐ ┌───────────────┐         │
+│   │  Master 1     │ │  Master 2     │ │  Master 3     │         │
+│   │               │ │               │ │               │         │
+│   │ • API Server  │ │ • API Server  │ │ • API Server  │         │
+│   │ • Scheduler   │ │ • Scheduler   │ │ • Scheduler   │         │
+│   │ • Controller  │ │ • Controller  │ │ • Controller  │         │
+│   │   Manager     │ │   Manager     │ │   Manager     │         │
+│   │ • etcd        │ │ • etcd        │ │ • etcd        │         │
+│   └───────────────┘ └───────────────┘ └───────────────┘         │
+│                                                                 │
 │   Notes:                                                        │
 │   • API Server: All instances active (load balanced)            │
 │   • Scheduler: Leader election (only 1 active)                  │
 │   • Controller Manager: Leader election (only 1 active)         │
-│   • etcd: Raft consensus (1 leader, N-1 followers)             │
+│   • etcd: Raft consensus (1 leader, N-1 followers)              │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -684,5 +684,11 @@ Understanding Kubernetes architecture is fundamental to:
 - Designing for high availability
 - Securing your cluster
 - Optimizing performance
+
+---
+
+## Next Steps
+
+Now that you understand the architecture, head to **[Day 3: Pods, ReplicaSets, and Deployments](../day-3/README.md)** to start creating workloads!
 
 ---

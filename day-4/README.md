@@ -1296,3 +1296,9 @@ metadata:
 6. **Always configure readiness probes** for proper routing
 
 ---
+
+## Next Steps
+
+Services work great for internal traffic, but for HTTP routing from the internet, you need Ingress. Continue to **[Day 5: Ingress](../day-5/README.md)**!
+
+---

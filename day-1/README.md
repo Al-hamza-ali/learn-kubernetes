@@ -261,3 +261,86 @@ Kubernetes has become the de facto standard for container orchestration because 
 Learning Kubernetes is an investment that pays off as you build and operate modern cloud-native applications.
 
 ---
+
+## 🚀 Getting Started
+
+Before diving into the architecture (Day 2), let's set up a local Kubernetes cluster to experiment with.
+
+### Option 1: Minikube (Recommended for Learning)
+
+```bash
+# Install Minikube
+# macOS
+brew install minikube
+
+# Linux
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+
+# Windows (PowerShell as Admin)
+choco install minikube
+
+# Start cluster
+minikube start
+
+# Verify
+kubectl get nodes
+```
+
+### Option 2: Docker Desktop
+
+1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+2. Open Settings → Kubernetes
+3. Check "Enable Kubernetes"
+4. Click "Apply & Restart"
+
+### Option 3: Kind (Kubernetes in Docker)
+
+```bash
+# Install Kind
+# macOS
+brew install kind
+
+# Linux
+curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.20.0/kind-linux-amd64
+chmod +x ./kind
+sudo mv ./kind /usr/local/bin/kind
+
+# Create cluster
+kind create cluster --name learning
+
+# Verify
+kubectl cluster-info
+```
+
+### Your First kubectl Commands
+
+```bash
+# Check cluster info
+kubectl cluster-info
+
+# List all nodes
+kubectl get nodes
+
+# List all namespaces
+kubectl get namespaces
+
+# Run your first pod!
+kubectl run hello --image=nginx --port=80
+
+# See it running
+kubectl get pods
+
+# Clean up
+kubectl delete pod hello
+```
+
+🎉 **Congratulations!** You have a working Kubernetes cluster!
+
+---
+
+## Next Steps
+
+Now that you understand what Kubernetes is and have a local cluster running, head to **[Day 2: Kubernetes Architecture](../day-2/README.md)** to learn about the components that make it all work.
+
+---

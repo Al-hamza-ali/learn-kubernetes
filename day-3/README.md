@@ -6,27 +6,27 @@ In Kubernetes, workloads are managed through a hierarchy of resources. Understan
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                    WORKLOAD HIERARCHY                            │
-│                                                                  │
+│                    WORKLOAD HIERARCHY                           │
+│                                                                 │
 │                      ┌──────────────┐                           │
 │                      │  Deployment  │  ◄── You define this      │
 │                      └──────┬───────┘                           │
 │                             │ manages                           │
-│                             ▼                                    │
+│                             ▼                                   │
 │                      ┌──────────────┐                           │
 │                      │  ReplicaSet  │  ◄── K8s creates this     │
 │                      └──────┬───────┘                           │
 │                             │ manages                           │
-│                             ▼                                    │
+│                             ▼                                   │
 │              ┌──────────────┼──────────────┐                    │
 │              │              │              │                    │
-│         ┌────┴────┐    ┌────┴────┐    ┌────┴────┐              │
-│         │   Pod   │    │   Pod   │    │   Pod   │              │
-│         └────┬────┘    └────┬────┘    └────┬────┘              │
+│         ┌────┴────┐    ┌────┴────┐    ┌────┴────┐               │
+│         │   Pod   │    │   Pod   │    │   Pod   │               │
+│         └────┬────┘    └────┬────┘    └────┬────┘               │
 │              │              │              │                    │
-│         ┌────┴────┐    ┌────┴────┐    ┌────┴────┐              │
-│         │Container│    │Container│    │Container│              │
-│         └─────────┘    └─────────┘    └─────────┘              │
+│         ┌────┴────┐    ┌────┴────┐    ┌────┴────┐               │
+│         │Container│    │Container│    │Container│               │
+│         └─────────┘    └─────────┘    └─────────┘               │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -47,47 +47,47 @@ Key characteristics:
 ### Pod Anatomy
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
+┌──────────────────────────────────────────────────────────────────┐
 │                            POD                                   │
 │                        IP: 10.1.0.5                              │
 │                                                                  │
-│  ┌─────────────────────────────────────────────────────────────┐│
-│  │                    Shared Network Namespace                  ││
-│  │                                                              ││
-│  │  ┌─────────────────┐         ┌─────────────────┐            ││
-│  │  │   Container 1   │         │   Container 2   │            ││
-│  │  │   (main app)    │ ◄─────► │   (sidecar)     │            ││
-│  │  │                 │localhost│                 │            ││
-│  │  │   Port: 8080    │         │   Port: 9090    │            ││
-│  │  └────────┬────────┘         └────────┬────────┘            ││
-│  │           │                           │                      ││
-│  └───────────┼───────────────────────────┼──────────────────────┘│
+│  ┌─────────────────────────────────────────────────────────────┐ │
+│  │                    Shared Network Namespace                 │ │
+│  │                                                             │ │
+│  │  ┌─────────────────┐         ┌─────────────────┐            │ │
+│  │  │   Container 1   │         │   Container 2   │            │ │
+│  │  │   (main app)    │ ◄─────► │   (sidecar)     │            │ │
+│  │  │                 │localhost│                 │            │ │
+│  │  │   Port: 8080    │         │   Port: 9090    │            │ │
+│  │  └────────┬────────┘         └────────┬────────┘            │ │
+│  │           │                           │                     │ │
+│  └───────────┼───────────────────────────┼─────────────────────┘ │
 │              │                           │                       │
 │  ┌───────────┴───────────────────────────┴──────────────────────┐│
-│  │                    Shared Volumes                             ││
+│  │                    Shared Volumes                            ││
 │  │  ┌─────────────────┐         ┌─────────────────┐             ││
 │  │  │   Volume 1      │         │   Volume 2      │             ││
 │  │  │   (logs)        │         │   (config)      │             ││
 │  │  └─────────────────┘         └─────────────────┘             ││
-│  └───────────────────────────────────────────────────────────────┘│
-└─────────────────────────────────────────────────────────────────┘
+│  └──────────────────────────────────────────────────────────────┘│
+└───────────────────────────────────────────────────────────────-──┘
 ```
 
 ### Pod Lifecycle
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                      POD LIFECYCLE                               │
-│                                                                  │
+│                      POD LIFECYCLE                              │
+│                                                                 │
 │   Pending ────► Running ────► Succeeded                         │
-│      │             │              │                              │
-│      │             │              └────► Completed (Job)         │
-│      │             │                                             │
-│      │             └────► Failed                                 │
-│      │                                                           │
+│      │             │              │                             │
+│      │             │              └────► Completed (Job)        │
+│      │             │                                            │
+│      │             └────► Failed                                │
+│      │                                                          │
 │      └────► Failed (ImagePullBackOff, etc.)                     │
-│                                                                  │
-│   States:                                                        │
+│                                                                 │
+│   States:                                                       │
 │   • Pending: Accepted but not yet running                       │
 │   • Running: At least one container is running                  │
 │   • Succeeded: All containers terminated successfully           │
@@ -1099,5 +1099,11 @@ kubectl annotate deployment/myapp kubernetes.io/change-cause="Deployed v2.0"
 4. Always use **Deployments** for production workloads
 5. Configure **health checks** for reliable deployments
 6. Use **rolling updates** for zero-downtime deployments
+
+---
+
+## Next Steps
+
+Your pods are running, but how do clients access them? Head to **[Day 4: Services](../day-4/README.md)** to learn about Kubernetes networking!
 
 ---
